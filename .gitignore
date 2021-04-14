@@ -350,6 +350,5 @@ MigrationBackup/
 .ionide/
 
 .vscode
-db.json
 build
 public
