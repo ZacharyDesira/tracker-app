@@ -9,7 +9,7 @@ import About from './components/About'
 function App() {
   const [showAddTask, setShowAddTask] = useState(false)
   const [tasks, setTasks] = useState([])
-  const url = 'http://zacharydesira.ddns.net:5000'
+  const url = 'https://my-json-server.typicode.com/ZacharyDesira/tracker-app-data/'
 
   useEffect(() => {
     const getTasks = async () => {
@@ -78,13 +78,13 @@ function App() {
     <Router>
       <div className="container">
       {<Header onAdd={() => setShowAddTask(!showAddTask)} showAdd={showAddTask} />}
-        <Route path='/tracker-app' exact render={(props) => (
+        <Route path='/' exact render={(props) => (
           <>
             {showAddTask && <AddTask onAdd={addTask} />}
             {tasks.length > 0 ? (<Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />) : ('No Tasks to Show')}
           </>
         )} />
-        <Route path='/tracker-app/about' component={About} />
+        <Route path='/about' component={About} />
         <Footer />
       </div>
     </Router>
