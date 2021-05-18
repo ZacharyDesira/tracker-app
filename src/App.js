@@ -9,7 +9,7 @@ import About from './components/About'
 function App() {
   const [showAddTask, setShowAddTask] = useState(false)
   const [tasks, setTasks] = useState([])
-  const url = 'https://my-json-server.typicode.com/ZacharyDesira/tracker-app-data/'
+  const url = 'https://my-json-server.typicode.com/ZacharyDesira/tracker-app-data'
 
   useEffect(() => {
     const getTasks = async () => {
